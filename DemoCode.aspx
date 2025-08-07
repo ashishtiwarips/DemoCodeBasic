@@ -17,7 +17,7 @@
         <asp:Label ID="Label2" runat="server" Text="Favorite Color: "></asp:Label>
         <asp:TextBox ID="TextBoxColor" runat="server"></asp:TextBox>
         <br /><br />
-        <asp:Button ID="ButtonSubmit" runat="server" Text="Submit111" OnClick="ButtonSubmit_Click" />
+        <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" OnClick="ButtonSubmit_Click" />
         <br /><br />
         <asp:Label ID="LabelResult" runat="server" ForeColor="Green"></asp:Label>
     </form>
