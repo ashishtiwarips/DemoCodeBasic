@@ -8,7 +8,7 @@ Public Class DemoCode
         If name <> "" And color <> "" Then
             LabelResult.Text = MyLibrary.MyLibrary.GreetingsHelper.BuildGreeting(name, color)
         Else
-            LabelResult.Text = "Please enter both your name and favorite color."
+            LabelResult.Text = "Please enter both ss your name and favorite color."
         End If
     End Sub
 
