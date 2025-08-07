@@ -10,12 +10,15 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+          clean: true
 
       - name: Copy Changed files to IIS Folder
         run: |
           $source = "${{ github.workspace }}"
           $destination = "D:\DemoCodeBasic\DemoCodeBasic"
-          robocopy $source $destination *.aspx /S /XO
-          robocopy $source $destination *.vb /S /XO
-          robocopy $source $destination *.aspx.vb /S /XO
+          robocopy $source $destination *.aspx /S /IS /R:3 /W:5 /XD ".git"
+          robocopy $source $destination *.vb /S /IS /R:3 /W:5 /XD ".git"
+          robocopy $source $destination *.aspx.vb /S /IS /R:3 /W:5 /XD ".git"
         shell: powershell
+        continue-on-error: true
