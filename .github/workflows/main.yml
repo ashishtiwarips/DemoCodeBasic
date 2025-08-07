@@ -1,0 +1,22 @@
+name: Deploy Changed Files to IIS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-changed-files:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Copy Changed .aspx and .vb files to IIS Folder
+        run: |
+          $source = "${{ github.workspace }}"
+          $destination = "D:\DemoCodeBasic\DemoCodeBasic"
+          robocopy $source $destination *.aspx /S /XO
+          robocopy $source $destination *.vb /S /XO
+        shell: powershell
