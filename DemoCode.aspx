@@ -11,7 +11,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server">
 </asp:ScriptManager>
         <h2>Enter Details</h2>
-        <asp:Label ID="Label1" runat="server" Text="Name: "></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Name(Full): "></asp:Label>
         <asp:TextBox ID="textboxname" runat="server"></asp:TextBox>
         <br /><br />
         <asp:Label ID="Label2" runat="server" Text="Favorite Color: "></asp:Label>
@@ -23,3 +23,4 @@
     </form>
 </body>
 </html>
+
